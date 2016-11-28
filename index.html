@@ -1,10 +1,10 @@
 <!-- Respect any widths and heights indicated in the annotated design file.
 *AnalogSea's logo appears at the top of the page. 
 *The form should post to the url /signup/ when the user submits it.
-The email and password fields are both required.
-The form should validate the email field for a valid email address.
-The "forgot password" link should point to /forgot-password/new.
-The login link should point to /login.
+*The email and password fields are both required.
+*The form should validate the email field for a valid email address.
+*The "forgot password" link should point to /forgot-password/new.
+*The login link should point to /login.
 *The logo and form should be horizontally centered, and have a height of 75px, as indicated in the design. Although the source file has a height of 111px, use CSS to set its height to 35px.
 Stretch feature: When the user hovers over the submit button, it should transition to a darker shade of green.
 The page should be SEO and accessibility friendly. That means including a title and description in the head of the document, and using labels with their for attribute set on the form. -->
@@ -22,11 +22,19 @@ The page should be SEO and accessibility friendly. That means including a title 
 		<div id="signup-container">
 			<h1>Sign up</h1>
 			<form class="signup-form" action="/signup/" method="post">
-				<label for="email">Email</label>
-					<input type="text" placeholder="foo@bar.com" name="email" id="email">
-				<label for="password">Password</label>
-					<input type="password" placeholder="1234passw0rd" name="password" id="password">
+				<fieldset>
+					<label for="email">Email</label>
+						<input type="text" placeholder="foo@bar.com" name="email" id="email" required pattern="[^ @]*@[^ @]*">
+					<label for="password">Password</label>
+						<input type="password" placeholder="1234passw0rd" name="password" id="password" required>
+				</fieldset>
+				<button type="submit">Sign up</button>
+				<p id="forgot-password"><a class="forgot-password" href="http://www.analog.com/forgot-password/new">Forgot password?</a></p>
 			</form>
+		</div>
+		<div id="have-account">
+			<h5>Already have an account?</h5>
+			<h5><a class="login" href="http://www.analog.com/login">Log in</a></h5>
 		</div>
 	</main>
 </body>
