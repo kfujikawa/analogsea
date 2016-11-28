@@ -21,14 +21,16 @@ The page should be SEO and accessibility friendly. That means including a title 
 	<main>
 		<div id="signup-container">
 			<h1>Sign up</h1>
-			<form class="signup-form" action="/signup/" method="post">
+			<form class="signup-form" action="http://www.analogsea.com/signup/" method="post">
 				<fieldset>
 					<label for="email">Email</label>
 						<input type="text" placeholder="foo@bar.com" name="email" id="email" required pattern="[^ @]*@[^ @]*">
 					<label for="password">Password</label>
 						<input type="password" placeholder="1234passw0rd" name="password" id="password" required>
 				</fieldset>
+				<div id="button-holder">
 				<button type="submit">Sign up</button>
+				</div>
 				<p id="forgot-password"><a class="forgot-password" href="http://www.analog.com/forgot-password/new">Forgot password?</a></p>
 			</form>
 		</div>
